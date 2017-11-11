@@ -1,0 +1,4 @@
+output/
+.git/
+__pycache__/
+.idea/

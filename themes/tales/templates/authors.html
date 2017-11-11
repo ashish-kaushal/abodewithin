@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="widewrapper main">
+  <div class="container content">
+      <h1>Our Authors</h1>
+        <div class="row credits">
+            {% for author, articles in authors|sort %} {# must be after "row" -ashish #}
+              <div class="col-md-2 col-sm-4 image">
+                <a href="{{ SITEURL }}/{{ author.url }}"><img src="{{ SITEURL }}/theme/images/{{ author }}.png" class="img-responsive" alt="{{ author }}" height="183" width="183" ></a>
+              </div>
+              <div class="col-md-4 col-sm-8 details"> <!-- bold name -->
+                  <h3><a href="#" target="_blank">{{ author }}</a></h3>
+                  <div class="link">
+                      <span class="bold">Total Articles:</span> <!-- articles count -->
+                      <span><a href="{{ SITEURL }}/{{ author.url }}" target="_blank">{{ articles|count }}</a></span>
+                  </div>
+                  <div class="license">
+                      <span class="bold">Expertise:</span>
+                      {% for article in articles %} {# loop within articles to get article.category shown as expertise #}
+                        <a href="#" target="_blank"> {{ article.category }} </a>
+                {% endfor %}
+                  </div>
+              </div>
+            {% endfor %}
+        </div>
+
+        
+
+  </div>
+</div>
+{% endblock %}

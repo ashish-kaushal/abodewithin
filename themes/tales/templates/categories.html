@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block header2 %}
+<div class="widewrapper subheader">
+    <div class="container">
+        <div class="tales-breadcrumb">
+            <a href="{{ SITEURL }}">Home</a>
+            <span class="separator">&#x2F;</span>
+            <a href="#">Category</a>
+        </div>
+
+        <div class="tales-searchbox">
+            <form action="#" method="get" accept-charset="utf-8">
+                <button class="searchbutton" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+                <input class="searchfield" id="searchbox" type="text" placeholder="Search">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock header2 %}
+
+{% block content %}
+    <div class="widewrapper main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 blog-main">
+                    <article class="blog-post">
+                        <header>
+                            <h1>Spiritual</script></h1>
+                            {% for category, articles in categories|sort %}
+                                    {% if category == 'environment' %}
+                                        {% for article in articles %}
+                                        <div <article class="blog-teaser">
+                                            <a href="{{ article }}">{{ article.summary }}</a><img src="/theme/images/hands.png" alt="Image" class="about-portrait" class="img-responsive">
+                                        </div>
+                                        {% endfor %}
+                                    {% endif %}
+                                {% endfor %}  
+
+                        </header>
+                        
+                    </article>      
+                </div> 
+            <!-- Sidebar -ashish -->
+            {% block sidebar %}
+                {% if SIDEBARMAIN %}
+                    <aside class="col-md-4 blog-aside">
+                        {% include "includes/" + SIDEBARMAIN %}
+                    </aside>
+                {% endif %}
+            {% endblock %}
+            <!-- End sidebar -->         
+        </div>
+    </div>  
+{% endblock %}
