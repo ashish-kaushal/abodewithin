@@ -3,9 +3,8 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'abodewithin'
-SITENAME = 'abodewithin.com'
+SITENAME = 'abode.within'
 SITEURL = 'http://abodewithin.com'
-SITETITLE = 'abodewithin'
 SITELOGO = 'tales-logo.png'
 
 TIMEZONE = 'America/New_York'
