@@ -40,15 +40,22 @@ SOCIAL = (('You can add links in your config file', '#'),
 DEFAULT_PAGINATION = 4
 SIDEBARMAIN = "sidebar_main.html"
 SIDEBAR_ARTICLE = "sidebar_article.html"
+LIKEUS = "social_likeus.html"
+SHAREUS = "social_shareus.html"
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 LOAD_CONTENT_CACHE = False
-DISPLAY_PAGES_ON_MENU = False
+DISPLAY_PAGES_ON_MENU = True
 
 # plugins
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['autostatic', 'advthumbnailer',]
+#PLUGINS = ['autostatic', 'advthumbnailer',]
+PLUGINS = ['thumbnailer', ]
 
-# image
-# IMG_EXT = ('jpg','png','gif','tiff')
+# Thumbnailer plugin
+
+IMAGE_PATH = 'photos'
+THUMBNAIL_DIR = 'photos/thumbnails/'
+THUMBNAIL_SIZES = {'thumb': '190x190', 'medium': '740x280'}
+THUMBNAIL_KEEP_NAME = True

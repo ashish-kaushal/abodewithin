@@ -60,11 +60,8 @@
                     <header>
                         <h1>{{ article.title|striptags|e }}</h1>
                         <div class="lead-image">
-                            {% if article.bigimage == null %}
-                                <img src="/theme/images/{{ article.image }}" alt="Hands" class="img-responsive">
-                            {% else %}
-                                <img src="/theme/images/{{ article.bigimage }}" alt="Hands" class="img-responsive">
-                            {% endif %}
+                            <!--<img class="image-process-crisp" src="/photos/{{ article.title }}.png" alt="{{ article.title }}"/>-->
+                            <img src="{{ THUMBNAIL_DIR }}/medium/{{ article.title }}.png" alt="{{ article.title }}"/>
                             <div class="meta clearfix">
                                 <div class="author">
                                     <i class="fa fa-user"></i>
@@ -99,6 +96,10 @@
                         <a href="#" class="social-icon color-three">
                                 <div class="inner-circle" ></div>
                                 <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-icon color-four">
+                                <div class="inner-circle" ></div>
+                                <i class="fa fa-linkedin"></i>
                         </a>
                 </aside>
 

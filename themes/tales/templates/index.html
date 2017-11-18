@@ -10,14 +10,15 @@
                         <div class="col-md-6 col-sm-6">
                             <article class="blog-teaser">
                                 <header>
-                                    <img src="/theme/images/{{ article.title }}.png" alt="{{ article.title }}" height="183" width="183">
+                                    <!--<img class="image-process-thumb" src="/photos/{{ article.title }}.png" alt="{{ article.title }}" width="190" height="190"/>-->
+                                   <img src="{{ THUMBNAIL_DIR }}/thumb/{{ article.title }}.png" alt="{{ article.title }}"/>
                                     <h3><a href="{{ SITEURL }}/{{ article.url }}"> {{ article.title }}</a></h3>
                                     <span class="meta"> {{ article.date|strftime('%d %B %Y') }},
                                         {% for author in article.authors %}
                                             <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
                                         {% endfor %}
                                     </span>
-                                    <hr>
+                                    {% include "includes/" + SHAREUS %}
                                 </header>
                                 <div class="body" >
                                     {% if article.summary %}
@@ -32,35 +33,16 @@
                     {% endfor %} {# for loop ends here #}
                     </div> <!-- end /div row -->
                     {% include "includes/pagination.html" %}
-                    <br>
-                        <div>               
-                            <aside class="social-icons clearfix">
-                            <a href="http://www.twitter.com/yaarrabba" class="social-icon color-one">
-                                    <div class="inner-circle" ></div>
-                                    <i class="fa fa-twitter"></i>
-                            </a>
-    
-                            <a href="http://plus.google.com/akaushal09" class="social-icon color-two">
-                                    <div class="inner-circle" ></div>
-                                    <i class="fa fa-google-plus"></i>
-                            </a>    
-    
-                            <a href="http://www.facebook.com/yaarrabba5" class="social-icon color-three">
-                                    <div class="inner-circle" ></div>
-                                    <i class="fa fa-facebook"></i>
-                            </a>
-                            </aside>
-                        </div>
-                </div>
-                
-            <!-- Sidebar -ashish -->
-            {% if SIDEBARMAIN %}
-                <aside class="col-md-4 blog-aside">
-                    {% include "includes/" + SIDEBARMAIN %}
-                </aside>
-            {% endif %}
-            <!-- End sidebar -->
 
+                </div>
+
+                <!-- Sidebar -ashish -->
+                {% if SIDEBARMAIN %}
+                    <aside class="col-md-4 blog-aside">
+                        {% include "includes/" + SIDEBARMAIN %}
+                    </aside>
+                {% endif %}
+            <!-- End sidebar -->
             </div>
         </div>
     </div>
