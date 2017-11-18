@@ -8,7 +8,7 @@
         <div class="row credits">
             {% for author, articles in authors|sort %} {# must be after "row" -ashish #}
               <div class="col-md-2 col-sm-4 image">
-                <a href="{{ SITEURL }}/{{ author.url }}"><img src="{{ SITEURL }}/theme/images/{{ author }}.png" class="img-responsive" alt="{{ author }}" height="183" width="183" ></a>
+                  <a href="{{ SITEURL }}/{{ author.url }}"><img src="{{ THUMBNAIL_DIR }}/thumb/{{ author.nickname }}.png" class="img-responsive" alt="{{ author }}" height="183" width="183" ></a>
               </div>
               <div class="col-md-4 col-sm-8 details"> <!-- bold name -->
                   <h3><a href="#" target="_blank">{{ author }}</a></h3>

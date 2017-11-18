@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'abodewithin'
 SITENAME = 'abode.within'
-SITEURL = 'http://abodewithin.com'
+SITEURL = ''
 SITELOGO = 'tales-logo.png'
 
 TIMEZONE = 'America/New_York'
@@ -34,8 +34,7 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('Twitter', 'https://twitter.com/derwinlu'), ('Bitbucket', 'https://bitbucket.org/winlu'))
 
 DEFAULT_PAGINATION = 4
 SIDEBARMAIN = "sidebar_main.html"
