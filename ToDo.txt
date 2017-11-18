@@ -19,3 +19,13 @@ Main
 
 Checkout => flattr https://github.com/getpelican/pelican-themes/blob/master/pelican-bootstrap3/templates/base.html
             https://flattr.com/
+
+
+# For creating linked in icon
+
+.social-icon.color-four {
+  background-color: #3f8ebd;
+}
+.social-icon.color-four .inner-circle {
+  background-color: #007bb6;
+}

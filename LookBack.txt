@@ -1,0 +1,3 @@
+image: {photo}thumb/blog2.png
+
+![](photos/thumb/blog2t.jpg)

@@ -4,7 +4,5 @@ Author: Avneesh Singh
 Nickname: tidi
 Category: spiritual
 Tags: astrology, spirituality
-Image: blog5.png
-Bigimage: blog5-big.png
 
 Ashish Kaushal blog2- Bacon ipsum dolor sit amet esse duis pastrami anim, pancetta fatback capicola officia tenderloin. Meatloaf culpa ut, bacon sed sausage jerky cillum est ham ad laboris ham hock dolore. Venison ut enim, aliqua elit frankfurter et incididunt consequat culpa nostru aliqua elit pancetta. 

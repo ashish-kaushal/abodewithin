@@ -741,9 +741,9 @@ hr {
   position: relative;
   margin-bottom: 90px;
   display: inline-block;
-  width: 135px;
-  height: 135px;
-  margin-left: 70px;
+  width: 105px;
+  height: 105px;
+  margin-left: 40px;
   border-radius: 200px;
 }
 .social-icon .inner-circle {
@@ -751,8 +751,8 @@ hr {
   top: 11px;
   left: 11px;
   display: block;
-  height: 113px;
-  width: 113px;
+  height: 83px;
+  width: 83px;
   border-radius: 200px;
   -webkit-transition: all 0.5s ease-in;
   -moz-transition: all 0.5s ease-in;
@@ -762,27 +762,30 @@ hr {
 .social-icon:hover .inner-circle {
   top: 0;
   left: 0;
-  width: 135px;
-  height: 135px;
+  width: 105px;
+  height: 105px;
 }
 .social-icon i {
   color: #f8f8f9;
   font-size: 70px;
   position: absolute;
-  top: 36px;
-  left: 37px;
+  top: 20px;
+  left: 22px;
 }
 .social-icon i.fa-google-plus {
   left: 25px;
 }
 .social-icon i.fa-facebook {
-  left: 45px;
+  left: 32px;
 }
 .social-icon i.fa-github-alt {
   top: 32px;
 }
 .social-icon:first-child {
   margin-left: 0;
+}
+.social-icon i.fa-linkedin {
+  top: 25px;
 }
 @media (min-width: 980px) and (max-width: 1199px) {
   .span6 .social-icon {
@@ -870,6 +873,12 @@ hr {
 .social-icon.color-three .inner-circle {
   background-color: #3f8ebd;
 }
+.social-icon.color-four {
+  background-color: #3f8ebd;
+}
+.social-icon.color-four .inner-circle {
+  background-color: #007bb6;
+
 /* Comments on blog detail page */
 aside.comments,
 aside.create-comment {

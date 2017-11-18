@@ -71,10 +71,10 @@
                     <div class="container">
                         <a href="{{ SITEURL }}" id="logo">
                             {% if not SITELOGO %}
-                                    {{ SITE }}
+                                    {{ SITENAME }}
                             {% elif SITELOGO %}
                                     <!--Use the following line instead if you want to use an image logo-->
-                                    <img src="{{ SITEURL }}/theme/images/{{ SITELOGO }}" alt="{{ SITETITLE }}">
+                                    <img src="{{ SITEURL }}/theme/images/{{ SITELOGO }}" alt="{{ SITENAME }}">
                             {% endif %}
                         </a>
                         <div id="mobile-nav-toggle" class="pull-right">
@@ -120,17 +120,23 @@
                             <div class="tales-breadcrumb">
                                 <a href="{{ SITEURL }}">Home</a>
                             </div>
+                             <div class="tales-searchbox">
+                                {% block likeus_bar %}
 
-                            <div class="tales-searchbox">
-                                <form action="#" method="get" accept-charset="utf-8">
-                                    <button class="searchbutton" type="submit">
-                                        <i class="fa fa-search"></i>
-                                    </button>
-                                    <input class="searchfield" id="searchbox" type="text" placeholder="Search">
-                                </form>
+                                {% endblock %}
+
+                                <div class="tales-searchbox">
+                                    <form action="#" method="get" accept-charset="utf-8">
+                                        <button class="searchbutton" type="submit">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                        <input class="searchfield" id="searchbox" type="text" placeholder="Search">
+                                    </form>
+                                </div>
+
+
                             </div>
                         </div>
-                    </div>
             {% endblock header2 %}
         </header>
     <!-- End header -->
@@ -155,16 +161,16 @@
 
                         <div class="stats">
                             <div class="line">
-                                    <span class="counter"> {{ articles | count }}</span>
+                                <span class="counter">{{ authors | count }}</span>
+                                <span class="caption">Authors</span>
+                            </div>
+                            <div class="line">
+                                <span class="counter"> {{ articles | count }}</span>
                                 <span class="caption">Articles</span>
                             </div>
                             <div class="line">
                                 <span class="counter">{{ tags | count}}</span>
                                 <span class="caption">Tags</span>
-                            </div>
-                            <div class="line">
-                                <span class="counter">{{ authors | count }}</span>
-                                <span class="caption">Authors</span>
                             </div>
                         </div>
                     </div>
@@ -186,7 +192,7 @@
                         <span>We are happy to hear from our readers. Thoughts, feedback, critique - all welcome! Drop us a line:</span>
 
                         <span class="email">
-                            <a href="#">akaushal09@gmail.com</a>, PGP key
+                            <a href="#">info@abodewithin.com</a>, PGP key
                         </span>
                     </div>
                 </div>

@@ -4,8 +4,5 @@ Author: Manav Sharma
 Nickname: manoo
 Category: environment
 Tags: spirtuality
-Slug: this-is-a-test-of-slug
-Image: blog2.png
-Bigimage: blog2-big.png
-
-Bacon ipsum dolor sit amet esse duis pastrami anim, pancetta fatback capicola officia tenderloin. Meatloaf culpa ut, bacon sed sausage jerky cillum est ham ad laboris ham hock dolore. Venison ut enim, aliqua elit frankfurter et incididunt consequat culpa nostru aliqua elit pancetta. This is a test of authors
+ 
+Thirdly, I needed to add some styling to the generated html. Since this blog is using bootstrap to make it not hopelessly hideous, I placed a div around the img tag, added class="img-responsive" to the image tag, and specified the grid layout options for bootstrap.

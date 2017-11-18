@@ -2,3 +2,4 @@ output/
 .git/
 __pycache__/
 .idea/
+pelican-themes/
