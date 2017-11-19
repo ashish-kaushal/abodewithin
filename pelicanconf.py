@@ -34,7 +34,7 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('Twitter', 'https://twitter.com/derwinlu'), ('Bitbucket', 'https://bitbucket.org/winlu'))
+SOCIAL = (('Twitter', 'https://twitter.com/username'), ('Bitbucket', 'https://bitbucket.org/username'))
 
 DEFAULT_PAGINATION = 4
 SIDEBARMAIN = "sidebar_main.html"
@@ -56,5 +56,5 @@ PLUGINS = ['thumbnailer', ]
 
 IMAGE_PATH = 'photos'
 THUMBNAIL_DIR = 'photos/thumbnails/'
-THUMBNAIL_SIZES = {'thumb': '190x190', 'medium': '740x280'}
+THUMBNAIL_SIZES = {'thumb': '183x183', 'medium': '740x280'}
 THUMBNAIL_KEEP_NAME = True
