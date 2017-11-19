@@ -31,9 +31,10 @@
     <div class="widewrapper subheader">
         <div class="container">
             <div class="tales-breadcrumb">
-                <a href="{{ SITEURL }}">Home</a>
+                <a href="{{ SITEURL }}/" title="Home">
+                <i class="fa fa-home fa-fw fa-lg"></i></a>
                 <span class="separator">&#x2F;</span>
-                <a href="{{ SITEURL }}/{{ article.url }}">{{ article.category }}</a>
+                <a href="{{ SITEURL }}/{{ category.url }}">{{ article.category }}</a>
                 <span class="separator">&#x2F;</span>
                 <a href="#">{{ article.title }}</a>
             </div>
@@ -51,7 +52,6 @@
     {% endblock header2 %}
     
     {% block content %}
-    
     <div class="widewrapper main">
     <div class="container">
         <div class="row">

@@ -58,7 +58,7 @@
             {% if TAG_FEED_RSS and tag %}
             <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
             {% endif %}
-        {% endblock head %}
+    {% endblock head %}
     </head>
 
     <body>
@@ -71,10 +71,10 @@
                     <div class="container">
                         <a href="{{ SITEURL }}" id="logo">
                             {% if not SITELOGO %}
-                                    {{ SITENAME }}
+                                {{ SITENAME }}
                             {% elif SITELOGO %}
-                                    <!--Use the following line instead if you want to use an image logo-->
-                                    <img src="{{ SITEURL }}/theme/images/{{ SITELOGO }}" alt="{{ SITENAME }}">
+                                <!--Use the following line instead if you want to use an image logo-->
+                                <img src="{{ SITEURL }}/theme/images/{{ SITELOGO }}" alt="{{ SITENAME }}">
                             {% endif %}
                         </a>
                         <div id="mobile-nav-toggle" class="pull-right">
@@ -88,26 +88,26 @@
                                 <ul class="nav nav-pills navbar-nav">
 
                                 <!-- dropdown menu -ashish *can't be used as querystring won't work -->
-                                    <li class="dropdown active">
-                                        <a class="dropdown-toggle"
-                                        data-toggle="dropdown"
-                                        href="{{ SITEURL }}/categories.html">
-                                            Categories
-                                            <b class="caret"></b>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                                {% for category, articles in categories|sort %}
-                                                    <li><a href="/category/{{ category }}">{{ category }}</a></li>
-                                                {% endfor %}
-                                        </ul>
-                                    </li>
+                                <li class="dropdown active">
+                                    <a class="dropdown-toggle"
+                                    data-toggle="dropdown"
+                                    href="{{ SITEURL }}/categories.html">
+                                        Categories
+                                        <b class="caret"></b>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        {% for category, articles in categories|sort %}
+                                            <li><a href="/category/{{ category }}">{{ category }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
                                 <!-- end dropdown menu -->
-                                    <li>
-                                        <a href="{{ SITEURL }}/authors.html">Authors</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ SITEURL }}/pages/about-us.html">About</a>
-                                    </li>
+                                <li>
+                                    <a href="{{ SITEURL }}/authors.html">Authors</a>
+                                </li>
+                                <li>
+                                    <a href="{{ SITEURL }}/pages/about-us.html">About</a>
+                                </li>
                                 </ul>
                             </div>
                         </nav>
@@ -115,29 +115,34 @@
                 </div>
             {% endblock header1 %}
             {% block header2 %}
-                    <div class="widewrapper subheader">
-                        <div class="container">
-                            <div class="tales-breadcrumb">
-                                <a href="{{ SITEURL }}">Home</a>
-                            </div>
-                             <div class="tales-searchbox">
-                                {% block likeus_bar %}
+            <div class="widewrapper subheader">
+                <div class="container">
+                    <div class="tales-breadcrumb">
+                    {% block breadcrumb %}
+                        <a href="{{ SITEURL }}/" title="Home">
+                            <i class="fa fa-home fa-fw fa-lg"></i></a>
 
-                                {% endblock %}
+                    {% endblock %}
+                    </div>
 
-                                <div class="tales-searchbox">
-                                    <form action="#" method="get" accept-charset="utf-8">
-                                        <button class="searchbutton" type="submit">
-                                            <i class="fa fa-search"></i>
-                                        </button>
-                                        <input class="searchfield" id="searchbox" type="text" placeholder="Search">
-                                    </form>
-                                </div>
+                     <div class="tales-searchbox">
+                        {% block likeus_bar %}
 
+                        {% endblock %}
 
-                            </div>
+                        <div class="tales-searchbox">
+                            <form action="#" method="get" accept-charset="utf-8">
+                                <button class="searchbutton" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                                <input class="searchfield" id="searchbox" type="text" placeholder="Search">
+                            </form>
                         </div>
-            {% endblock header2 %}
+
+
+                    </div>
+                </div>
+            </div>{% endblock header2 %}
         </header>
     <!-- End header -->
 

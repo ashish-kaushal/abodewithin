@@ -25,18 +25,18 @@ Tags: Contact us, Self-empowerment, Society-empowerment, Justice, Peace, Love
             <script>window.jQuery || document.write('<script src="{{ SITEURL }}/theme/js/jquery.min.js"><\/script>')</script>
     </head>
     <body>
-        <div class="widewrapper main">
+    <div class="widewrapper main">
             <div class="container about">
                 <h1>Hello There, We here at <span class="about-bold">abodewithin</span></h1>
                 <span class="about-medium">have lived a life where fear and greed ruled us. When we were low for one reason or other we looked at people who were apparently worse than us to solace ourself and to get into an attitude of gratitude. This constant effort just to feel adequate was a struggle. 
                 <header>
-                <img class="about-portrait img-responsive" src="/photos/thumbnails/thumb/om.jpg" align="right" alt="abodewithin" >
+                <img src="/photos/thumbnails/thumb/om.jpg" class="about-portrait img-responsive" align="right" alt="abodewithin" >
                 </header>
                 </span> 
                 <p style="font-size:140%;">A never stopping talk in the head to ourself and the state of comparative analysis was tiring, we were tired all the time. We needed intoxication to feel good or to smile and to laugh. When that feel good state worn out we quickly got into a state of depression, until we found that...</p>
                 <p><span class="about-large"> We are spiritual being full of love and perfectly complete. We have a vast ocean of peace in us. We just never knew where to look. We never knew our being is the world to us and that is complete. We never knew the differnce in the state of <span class="about-italic"> "instinctive me" and "me" being the knower of that state. </span> Once we knew, the life completely changed to a smiling happy, well in most of situations and struggles vanished away. <span class="about-bold">The purpose of this website is to find that...<span class="about-bold">abodewithin!</span></p>
                 <div class="about-button">
-                    <a class="btn btn-xlarge btn-tales-one" href="#contact">Drop Us A Line</a>
+                    <a class="btn btn-xlarge btn-tales-one" href="#contact">Drop Me A Line</a>
                 </div>
                 <hr>
             </div>
