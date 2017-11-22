@@ -59,6 +59,9 @@
             <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
             {% endif %}
     {% endblock head %}
+    {% block fbcomments %}    
+ 
+    {% endblock fbcomments %}
     </head>
 
     <body>
