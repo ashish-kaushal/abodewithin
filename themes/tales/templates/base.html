@@ -100,7 +100,7 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         {% for category, articles in categories|sort %}
-                                            <li><a href="/category/{{ category }}">{{ category }}</a></li>
+                                            <li><a href="{{ SITEURL }}/{{ category }}.html">{{ category }}</a></li>
                                         {% endfor %}
                                     </ul>
                                 </li>
