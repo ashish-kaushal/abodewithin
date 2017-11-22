@@ -5,4 +5,4 @@ Nickname: manoo
 Category: environment
 Tags: spirtuality
  
-Thirdly, I needed to add some styling to the generated html. Since this blog is using bootstrap to make it not hopelessly hideous, I placed a div around the img tag, added class="img-responsive" to the image tag, and specified the grid layout options for bootstrap.
+Finally, I wanted a lightbox. The pelican photos documentation again very helpfully provides some code to achieve this and explains what to do with it. I just had to change a few lines to get it working with my theme. Instead of linking to an external jQuery, I just sourced the local one necessary for my theme to work. I changed <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> to <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.min.js"></script>. One more problem, however. The guide I was following said to put the magnific-popup.{js,css} files in the base of the theme directory, but the theme that I'm using checks for them in the css and js directories within a static. It will not work if you symlink the files instead of copying them. I ended up with the following code
