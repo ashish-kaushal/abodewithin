@@ -17,6 +17,9 @@ Main
 9. Make side bar dynamic
 10. Make footer dynamic
 
+** create plugin ** that corresponds navigation bar with name of the page, such as, navbar-authors.html **
+
+
 Checkout => flattr https://github.com/getpelican/pelican-themes/blob/master/pelican-bootstrap3/templates/base.html
             https://flattr.com/
 

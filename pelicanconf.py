@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'abodewithin'
-SITENAME = 'abode.within'
+SITENAME = 'AbodeWithin'
 SITEURL = ''
 SITELOGO = 'tales-logo.png'
 
@@ -18,7 +18,7 @@ EXTRA_PATH_METADATA = {
     'extra/favicon.ico': {'path': 'favicon.ico'}
 }
 
-MAIN_STYLESHEET = 'styles-bluegreen.css'
+MAIN_STYLESHEET = 'styles-brightblue.css'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -50,7 +50,11 @@ DISPLAY_PAGES_ON_MENU = True
 # plugins
 PLUGIN_PATHS = ['plugins']
 #PLUGINS = ['autostatic', 'advthumbnailer',]
-PLUGINS = ['thumbnailer', ]
+PLUGINS = ['thumbnailer',]
+
+# Summary plugin
+
+SUMMARY_USE_FIRST_PARAGRAPH = True
 
 # Thumbnailer plugin
 

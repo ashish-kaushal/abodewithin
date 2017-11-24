@@ -26,7 +26,7 @@
     <meta property="og:image" content="{{ SITEURL }}/theme/images/{{ article.title }}.png">
     <meta property="article:published_time" content="{{ article.date }}">
     {% endblock %}
-
+    {% block header1 %} {% include "navbar-header1-index.html" %} {% endblock header1 %}
     {% block header2 %}
     <div class="widewrapper subheader">
         <div class="container">
@@ -51,14 +51,14 @@
     </div>
     {% endblock header2 %}
     {% block fbcomments %}
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11';
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11';
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
     {% endblock fbcomments %}
     
     {% block content %}
@@ -70,8 +70,8 @@
                     <header>
                         <h1>{{ article.title|striptags|e }}</h1>
                         <div class="lead-image">
-                            <!--<img class="image-process-crisp" src="/photos/{{ article.title }}.png" alt="{{ article.title }}"/>-->
-                            <img src="{{ THUMBNAIL_DIR }}/medium/{{ article.title }}.png" alt="{{ article.title }}"/>
+                            <img src="{{ THUMBNAIL_DIR }}medium/{{ article.title }}.png" alt="{{ article.title }}"/>
+                            
                             <div class="meta clearfix">
                                 <div class="author">
                                     <i class="fa fa-user"></i>

@@ -33,7 +33,8 @@
             <link href="{{ SITEURL }}/theme/static/css/style.css" rel="stylesheet" />
             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
             -->
-            <title>{% block title %}{{ SITENAME }}{% if SITETAG %} - {{ SITETAG|escape }}{% endif %}{% endblock %}</title>
+            <title>{% block title %}{{ SITENAME }} - {% endblock %}</title>
+
             {% if FEED_ALL_ATOM %}
             <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
             {% endif %}
@@ -66,97 +67,16 @@
 
     <body>
         <link rel="shortcut icon" href="{{ SITEURL }}/{{ FAVICON|default('favicon.ico') }}" />
-        <!-- Header part of the index page which should be carried to all the pages. -ashish -->
-
         <header>
-            {% block header1 %}
-                <div class="widewrapper masthead">
-                    <div class="container">
-                        <a href="{{ SITEURL }}" id="logo">
-                            {% if not SITELOGO %}
-                                {{ SITENAME }}
-                            {% elif SITELOGO %}
-                                <!--Use the following line instead if you want to use an image logo-->
-                                <img src="{{ SITEURL }}/theme/images/{{ SITELOGO }}" alt="{{ SITENAME }}">
-                            {% endif %}
-                        </a>
-                        <div id="mobile-nav-toggle" class="pull-right">
-                            <a href="#" data-toggle="collapse" data-target=".tales-nav .navbar-collapse">
-                                <i class="fa fa-bars"></i>
-                            </a>
-                        </div>
-
-                        <nav class="pull-right tales-nav">
-                            <div class="collapse navbar-collapse">
-                                <ul class="nav nav-pills navbar-nav">
-
-                                <!-- dropdown menu -ashish *can't be used as querystring won't work -->
-                                <li class="dropdown active">
-                                    <a class="dropdown-toggle"
-                                    data-toggle="dropdown"
-                                    href="{{ SITEURL }}/categories.html">
-                                        Categories
-                                        <b class="caret"></b>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        {% for category, articles in categories|sort %}
-                                            <li><a href="{{ SITEURL }}/{{ category }}.html">{{ category }}</a></li>
-                                        {% endfor %}
-                                    </ul>
-                                </li>
-                                <!-- end dropdown menu -->
-                                <li>
-                                    <a href="{{ SITEURL }}/authors.html">Authors</a>
-                                </li>
-                                <li>
-                                    <a href="{{ SITEURL }}/pages/about-us.html">About</a>
-                                </li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            {% endblock header1 %}
-            {% block header2 %}
-            <div class="widewrapper subheader">
-                <div class="container">
-                    <div class="tales-breadcrumb">
-                    {% block breadcrumb %}
-                        <a href="{{ SITEURL }}/" title="Home">
-                            <i class="fa fa-home fa-fw fa-lg"></i></a>
-
-                    {% endblock %}
-                    </div>
-
-                     <div class="tales-searchbox">
-                        {% block likeus_bar %}
-
-                        {% endblock %}
-
-                        <div class="tales-searchbox">
-                            <form action="#" method="get" accept-charset="utf-8">
-                                <button class="searchbutton" type="submit">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                                <input class="searchfield" id="searchbox" type="text" placeholder="Search">
-                            </form>
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>{% endblock header2 %}
+            {% block header1 %} {% endblock header1 %}
+            {% block header2 %} {% endblock header2 %}
         </header>
-    <!-- End header -->
+        {% block content %}
+        {% endblock %}
 
-    <!-- Start Body -ashish -->
-    {% block content %}
-    {% endblock %}
-
-    {% block SIDEBAR %}
-    {% endblock %}
-    <!-- footer part of the page which should be carried to all the pages -ashish -->
-
+        {% block SIDEBAR %}
+        {% endblock %}
+        
     <footer>
         {% block footer %}
         <div class="widewrapper footer">
@@ -182,7 +102,7 @@
                             </div>
                         </div>
                     </div>
-
+                    
                     <div class="col-md-4 footer-widget">
                         <h3> <i class="fa fa-star"></i> Hall of Fame</h3>
                         <ul class="tales-list">

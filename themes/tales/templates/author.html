@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% block title %} {{ super() }} {{ page_name }} {% endblock %}
+{% block header1 %} {% include "navbar-header1-authors.html" %} {% endblock header1 %}
 {% block header2 %}
 <div class="widewrapper subheader">
     <div class="container">
