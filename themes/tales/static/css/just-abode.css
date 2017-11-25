@@ -1,8 +1,8 @@
 /*!
- *  Tales 3.3.6-v3
+ *  Tales-next-generationf
  *
- *  Copyright 2016 HackerThemes
- *  http://hackerthemes.com
+ *  Copyright 2017 @abodewithin
+ *  http://abodewithin.com
  *
  */
 
@@ -148,8 +148,7 @@ hr {
   background-color: #b4e0f9;
 }
 .tales-nav .nav-pills > .nested > a {
-  /*text-decoration: underline #ffffff;*/
-  border-bottom: 2px solid #ffffff;
+  text-decoration: underline rgba(14, 28, 161, 0.966);
 }
 .tales-nav .nav-pills > .active > a:hover,
 .tales-nav .nav-pills > .active > a:focus {

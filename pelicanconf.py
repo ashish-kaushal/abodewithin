@@ -18,7 +18,7 @@ EXTRA_PATH_METADATA = {
     'extra/favicon.ico': {'path': 'favicon.ico'}
 }
 
-MAIN_STYLESHEET = 'styles-brightblue.css'
+MAIN_STYLESHEET = 'styles-dark-yellow.css'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None

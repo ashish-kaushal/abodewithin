@@ -147,6 +147,10 @@ hr {
 .tales-nav .nav-pills > .active > a {
   background-color: #ffe87d;
 }
+.tales-nav .nav-pills > .nested > a {
+  /*text-decoration: underline #ffe87d;*/
+  border-bottom: 2px solid #ffffff;
+}
 .tales-nav .nav-pills > .active > a:hover,
 .tales-nav .nav-pills > .active > a:focus {
   background-color: #ffe87d;
