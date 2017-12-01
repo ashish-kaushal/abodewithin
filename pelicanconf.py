@@ -12,13 +12,13 @@ TIMEZONE = 'America/New_York'
 DEFAULT_LANG = 'English'
 THEME = './themes/tales'
 PATH = 'content'
-STATIC_PATHS = ['images',  'pages', 'extra/robots.txt', 'extra/favicon.ico',]
+STATIC_PATHS = ['pages', 'extra/robots.txt', 'extra/favicon.ico',]
 EXTRA_PATH_METADATA = {
     'extra/robots.txt': {'path': 'robots.txt'},
     'extra/favicon.ico': {'path': 'favicon.ico'}
 }
 
-MAIN_STYLESHEET = 'styles-dark-yellow.css'
+MAIN_STYLESHEET = 'styles-brightblue.css'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -62,3 +62,7 @@ IMAGE_PATH = 'photos'
 THUMBNAIL_DIR = 'photos/thumbnails/'
 THUMBNAIL_SIZES = {'thumb': '183x183', 'medium': '740x280'}
 THUMBNAIL_KEEP_NAME = True
+
+# ignore html files
+READERS = {'html': None}
+PAGE_PATHS = ['pages']

@@ -26,7 +26,7 @@
     <meta property="og:image" content="{{ SITEURL }}/theme/images/{{ article.title }}.png">
     <meta property="article:published_time" content="{{ article.date }}">
     {% endblock %}
-    {% block header1 %} {% include "navbar-header1-index.html" %} {% endblock header1 %}
+    {% block header1 %} {% include "navbar-header1-categories.html" %} {% endblock header1 %}
     {% block header2 %}
     <div class="widewrapper subheader">
         <div class="container">
@@ -91,7 +91,31 @@
                     <div class="body">
                         {{ article.content }}
                     </div>
-                    <div class="fb-comments" data-href="http://abodewithin.com/{{ article.url }}" data-width="740" data-numposts="5"></div>
+                    <div> 
+                        <!-- AddToAny BEGIN -->
+                        <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                        <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                        <a class="a2a_button_facebook"></a>
+                        <a class="a2a_button_twitter"></a>
+                        <a class="a2a_button_linkedin"></a>
+                        <a class="a2a_button_google_plus"></a>
+                        <a class="a2a_button_pinterest"></a>
+                        <a class="a2a_button_tumblr"></a>
+                        <a class="a2a_button_stumbleupon"></a>
+                        <a class="a2a_button_whatsapp"></a>
+                        <a class="a2a_button_email"></a>
+                        <a class="a2a_button_reddit"></a>
+                        </div>
+                        <script>
+                        var a2a_config = a2a_config || {};
+                        a2a_config.linkurl = "http://abodewithin.com/{{ article.title }}";
+                        </script>
+                        <script async src="https://static.addtoany.com/menu/page.js"></script>
+                        <!-- AddToAny END -->
+
+                        
+                    </div>
+                    <div class="fb-comments" data-href="http://abodewithin.com/{{ article.url }}.html" data-width="740" data-numposts="5"></div>
                 </article>
             </div>
             <!-- Sidebar -ashish -->
