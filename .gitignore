@@ -7,3 +7,6 @@ WB034M8P5.zip
 Tales-3.3.6-v3/
 pelican-plugins/
 .vscode/
+.python-version
+pelican.pid
+srv.pid

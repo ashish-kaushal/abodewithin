@@ -15,7 +15,7 @@ livereload==2.5.1
 Markdown==2.6.9
 MarkupSafe==1.0
 olefile==0.44
-paramiko==2.3.1
+paramiko
 pelican==3.7.1
 pelican-advthumbnailer==0.7.0
 pelican-autostatic==0.2.2
