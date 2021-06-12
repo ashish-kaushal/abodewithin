@@ -10,7 +10,7 @@ SITELOGO = 'tales-logo.png'
 TIMEZONE = 'America/New_York'
 
 DEFAULT_LANG = 'English'
-THEME = './themes/tales'
+THEME = 'themes/tales'
 PATH = 'content'
 STATIC_PATHS = ['pages', 'extra/robots.txt', 'extra/favicon.ico',]
 EXTRA_PATH_METADATA = {
